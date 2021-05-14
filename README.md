@@ -9,9 +9,8 @@ The analysis workflow consists of:
   - Blast alignment of each sequence to the reference
 
 
+To analyze all samples at once, first arrange input data as follows (note that fastq.gz files should first be unzipped):
 
-
-Input data organization:
 ```
 <path_to_base_dir>$ tree
 
