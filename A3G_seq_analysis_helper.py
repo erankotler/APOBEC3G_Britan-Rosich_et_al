@@ -9,6 +9,28 @@ from Bio.pairwise2 import format_alignment
 
 
 
+def downsample(in_dir, out_dir, n_reads):
+	''' Downsample fastq files in in_dir to a depth of n_reads, saved in out_d with same name '''
+	
+	downsampler_path="./sample_fastq.py" # a python2 script that downsamples a fastq file
+
+	for f in os.listdir(in_dir):
+		if f.endswith("fastq"):
+			in_f = os.path.join(in_dir,f)
+			out_f = os.path.join(out_dir,f)
+			
+			if out_f==in_f:
+				out_f = "subsampled_"+out_f
+
+			cmnd_s = "python2 %s -n %i %s %s"%(downsampler_path, n_reads, in_f, out_f)
+			print (cmnd_s)
+			os.system(cmnd_s)
+			os.rename(out_f+".0", out_f)
+		else:
+			print("file %s is not a .fastq file (inputs should be unzipped fastq only) - skipping file"%f)
+
+
+
 def extract_seqs(f, seq_start_query, expected_start_pos, read_len=150, nrows=None):
 	"""Extract relevant reads from fastq which contain seq_start_query within 3 bp of expected_start_pos
 	returns lists of Fwd reads that comply with the constraints and unmapped reads.

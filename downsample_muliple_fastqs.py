@@ -20,31 +20,26 @@ def downsample(in_dir, out_dir, n_reads):
 
 
 if __name__ == "__main__":
+	pass
 
-	### For experiment #1:
-	# in_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_572/in"
-	# out_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_572"
+	# base_d = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/Britan-Rosich" # Base path to data
+
+	# ### For experiment #1 (Run572)
+	# in_dir = os.path.join(base_d, "run572") 
 	# n_reads = 1500000
 
-	### For experiment #2:
-	#in_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_exp2/in"
-	#out_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_exp2"
-	#n_reads = 300000
+	# ### For experiment #2 (Run609)
+	# in_dir = os.path.join(base_d, "run609") 	
+	# n_reads = 300000
 
-	### For experiment #3:
-	# in_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_651_20210102/in"
-	# out_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_651_20210102"
+	# ### For experiment #3 (Run651)
+	# in_dir = os.path.join(base_d, "run651") 	
 	# n_reads = 1500000
 
-	### For experiment #4:
-	# in_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_665_20210124/in"
-	# out_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_665_20210124"
+	# ### For experiment #4 (Run 665)
+	# in_dir = os.path.join(base_d, "run665") 	
 	# n_reads = 100000
+	
+	# out_dir = os.path.join(in_dir, "downsampled")
 
-        ### For experiment #5
-	in_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_kotler_run684_20210225/in"
-	out_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_kotler_run684_20210225"
-	n_reads = 1500000
-
-
-	downsample(in_dir, out_dir, n_reads)
+	# downsample(in_dir, out_dir, n_reads)

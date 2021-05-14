@@ -58,43 +58,22 @@ def perform_downsampling(experiment_name):
 
 	if experiment_name=="experiment_1": ## Run572
 		in_dir = os.path.join(base_d, "run572") 
-		# out_dir = os.path.join(base_d, "run572/downsampled")
 		n_reads = 1500000
 
 	elif experiment_name=="experiment_2": # Run609
 		in_dir = os.path.join(base_d, "run609") 	
-		# out_dir = os.path.join(base_d, "run609/downsampled")
- 	# 	in_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_exp2/in"
-		# out_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_exp2"
 		n_reads = 300000
 
 	elif experiment_name=="experiment_3": ## Run651
 		in_dir = os.path.join(base_d, "run651") 	
-		# out_dir = os.path.join(base_d, "run651/downsampled")
-		# in_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_651_20210102/in" 
-		# out_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_651_20210102"
 		n_reads = 1500000
 
 	elif experiment_name=="experiment_4": ## Run 665
 		in_dir = os.path.join(base_d, "run665") 	
-		# out_dir = os.path.join(base_d, "run665/downsampled")
-		# in_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_665_20210124/in"
-		# out_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_665_20210124"
 		n_reads = 100000
-
-	elif experiment_name=="experiment_5": # PROB NOT NEEDED
-		in_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_kotler_run684_20210225/in"
-		out_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/downsampled_kotler_run684_20210225"
-		n_reads = 1500000
-
-	elif experiment_name=="experiment_6": # PROB NOT NEEDED
-		in_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/exp_6_kotler_run715_20210421_ISceI/raw"
-		out_dir = "/mnt/lab_data/kundaje/users/ekotler/A3G/Data/exp_6_kotler_run715_20210421_ISceI/downsampled"
-		n_reads = 4000000
 
 	else:
 		print ("Unrecognized experiment name")
-
 
 	out_dir = os.path.join(in_dir, "downsampled")
 	if not os.path.isdir(out_dir):
@@ -103,27 +82,6 @@ def perform_downsampling(experiment_name):
 	downsample(in_dir, out_dir, n_reads) # Perform downsampling 
 	print ("Downsampling complete, saved to", out_dir)
 	return (out_dir)
-
-
-def downsample(in_dir, out_dir, n_reads):#### MOVE THIS TO HELPER FUNCTIONS FILE
-	# downsampler_path="/users/ekotler/projects/A3G/Code/sample_fastq.py" # a python2 script that downsamples a fastq file
-	downsampler_path="./sample_fastq.py" # a python2 script that downsamples a fastq file
-
-	for f in os.listdir(in_dir):
-		if f.endswith("fastq"):
-			in_f = os.path.join(in_dir,f)
-			out_f = os.path.join(out_dir,f)
-			
-			if out_f==in_f:
-				out_f = "subsampled_"+out_f
-
-			cmnd_s = "python2 %s -n %i %s %s"%(downsampler_path, n_reads, in_f, out_f)
-			print (cmnd_s)
-			os.system(cmnd_s)
-			os.rename(out_f+".0", out_f)
-		else:
-			print("file %s is not a .fastq file (inputs should be unzipped fastq only) - skipping file"%f)
-
 
 
 def analyze_all_samples(args, params):
