@@ -31,7 +31,7 @@ To analyze all samples at once, first arrange input data as follows (note that f
 
 ```
 
-Then, update the script `analyze_all_exps.sh` with `BASE_D=<path_to_base_dir>` as used above and run.
+Then, update the script `analyze_all_exps.sh` with `BASE_D=<path_to_base_dir>` as used above and run. <br>
 Statistics for each sample will be printed to the screen and result csv files will be save under `<path_to_base_dir>/Results`
 
 
