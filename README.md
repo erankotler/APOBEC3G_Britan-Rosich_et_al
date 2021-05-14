@@ -4,9 +4,9 @@ This repository contains scripts used for the processing and analysis of sequenc
 The analysis workflow consists of:
 1. Downsampling fastq files from each experiment to an equal sequencing depth to enable unbiased comparions between samples.
 1. Comparing sequencing reads in fastq files to the reference plasmid sequnce. This is performed by:
-  2.1) Extracting relevant reads from fastq (contatining relevant part of Fwd primer sequence)
-  2.2) Assessing fraction of correctly repaired clevage sites (exact matches to reference) - examining the 18bp SceI cleavage site or the entire 131bp amplicon
-  2.3) Blast alignment of each sequence to the reference
+  - Extracting relevant reads from fastq (contatining relevant part of Fwd primer sequence)
+  - Assessing fraction of correctly repaired clevage sites (exact matches to reference) - examining the 18bp SceI cleavage site or the entire 131bp amplicon
+  - Blast alignment of each sequence to the reference
 
 
 
