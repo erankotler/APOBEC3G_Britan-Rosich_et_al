@@ -10,13 +10,13 @@ The analysis workflow consists of:
 
 
 
-Data organization:<br>
+Input data organization:
 
-<path_to_base_dir$ tree <br>
+<path_to_base_dir>$ tree
 .
 ├── run572 <br>
-│   ├── MK1_S1_R1_001.fastq <br>
-│   └── MK2_S2_R1_001.fastq <br>
+│   ├── MK1_S1_R1_001.fastq
+│   └── MK2_S2_R1_001.fastq
 ├── run609 <br>
 │   ├── MK10_S646_R1_001.fastq 
 │   └── MK9_S645_R1_001.fastq 
