@@ -32,7 +32,8 @@ To analyze all samples at once, first arrange input data as follows (note that f
 ```
 
 Then run: <br>
-`source analyze_all_exps.sh <path_to_base_dir>`. <br>
+`source analyze_all_exps.sh <path_to_base_dir>` <br>
+
 Results `.csv` files and statistics for each experiment (`summary.txt`) will be save under `<path_to_base_dir>/Results`
 
 
