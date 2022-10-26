@@ -1,6 +1,6 @@
 # APOBEC3G_Britan-Rosich_et_al
 
-This repository contains scripts used for the processing and analysis of sequencing data in the manuscipt "APOBEC3G protects the genome from radiation-induced damage" by Btiran-Rosich et. al. See manuscript for details about the analysis and for deposited data locations.
+This repository contains scripts used for the processing and analysis of sequencing data in the FEBS Journal manuscipt "APOBEC3G protects the genome of human cultured cells and mice from radiation-induced damage" by Btiran-Rosich et. al. See manuscript for details about the analysis and for deposited data locations.
 The analysis workflow consists of:
 1. Downsampling fastq files from each experiment to an equal sequencing depth to enable unbiased comparions between samples.
 1. Comparing sequencing reads in fastq files to the reference plasmid sequnce. This is performed by:
